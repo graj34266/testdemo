@@ -6,7 +6,9 @@ git'https://github.com/graj34266/testdemo/new/master'
 }
 stage ('compile-package'){
 
-sh 'mvn package'
+def mvnHome = tool name: 'maven', type: 'maven'
+
+sh "{$mvnHome}/boin/mvn package"
 
 }
 
