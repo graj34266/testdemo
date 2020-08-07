@@ -1,0 +1,12 @@
+Node {
+stage("SCM Checkout'){
+
+git'https://github.com/graj34266/testdemo/new/master'
+
+}
+stage ('compile-package'){
+sh 'mvn package'
+
+}
+
+}
